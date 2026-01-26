@@ -74,48 +74,15 @@
 <body>
 
 <header>
-  <h1>2025计划</h1>
+  <h1>2026新征程</h1>
 </header>
 
 <main>
   <section>
-    <h2>计划一：AI生成30分钟视频</h2>
-    <p>从2025年6月1日开始，我计划在年底前成功创建出一个 30 分钟的 AI 生成视频，展示我在 AI 内容创作方面的进步和成果。</p>
-
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-    </div>
-    <div id="progress-text"></div>
+    <h2>应用下载</h2>
+    <p>下载家庭用品安装包：<a href="family.zip" download>family.zip</a></p>
   </section>
 </main>
-
-<footer>
-  &copy; 2025 sunran
-</footer>
-
-<script>
-  const startDate = new Date('2025-06-01T00:00:00').getTime();
-  const endDate = new Date('2025-12-31T23:59:59').getTime();
-
-  function updateProgressBar() {
-    const now = new Date().getTime();
-    const total = endDate - startDate;
-    const elapsed = now - startDate;
-
-    let progress = (elapsed / total) * 100;
-    if (progress < 0) progress = 0;
-    if (progress > 100) progress = 100;
-
-    document.getElementById('progress-bar').style.width = progress + '%';
-
-    const daysLeft = Math.ceil((endDate - now) / (1000 * 60 * 60 * 24));
-    document.getElementById('progress-text').innerText =
-      `已进行: ${progress.toFixed(2)}% | 剩余 ${daysLeft} 天`;
-  }
-
-  updateProgressBar();
-  setInterval(updateProgressBar, 60000);
-</script>
 
 </body>
 </html>
